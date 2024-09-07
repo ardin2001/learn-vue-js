@@ -25,22 +25,27 @@
   </main>
 </template>
 
-<script setup>
-import { ref, createApp } from 'vue'
+<!-- <script setup>
+import { ref  } from 'vue'
 
-const name = ref('')
+const name = ref('ardin')
 const email = ref('')
 const password = ref('')
+</script> -->
 
-// const app = createApp({
-//   setup() {
-//     return {
-//       name,
-//       email,
-//       password
-//     }
-//   }
-// })
+<!-- perbedaan ketika tanpa menggunakan script setup -->
+<!-- membutuhkan export default kemudian di setup dengan return valuenya -->
+<script>
+import { ref } from 'vue'
 
-// app.mount('#form')
+export default {
+  setup() {
+    const name = ref('ardin')
+    const email = ref('')
+    const password = ref('')
+    return {
+      name, email, password
+    }
+  }
+}
 </script>
