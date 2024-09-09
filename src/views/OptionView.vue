@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h3>Option View</h3>
+        <h3>Option Page</h3>
         <form action="" id="form">
             <div class="name">
                 <label for="name">Name</label>

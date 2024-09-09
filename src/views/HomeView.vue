@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h3>Home</h3>
+    <h3>Home Page</h3>
     <form action="" id="form">
       <div class="name">
         <label for="name">Name</label>
@@ -24,8 +24,11 @@
           <input type="radio" value="wanita" name="jk" id="wanita" v-model="jk" />
           <label for="wanita">Wanita</label>
       </div>
+      <br>
+      <button @click="ResetInput" type="button" style="margin-right: 15px;">Reset</button>
+      <button @click="BtnView" type="button">{{ show ? 'Hide' : 'Show' }} Result</button>
 
-      <div class="result">
+      <div class="result" v-show="show">
         <p>Name: {{ name }}</p>
         <p>Email: {{ email }}</p>
         <p>Password: {{ password.length>6 ? password : password.length==0 ? ''  : 'password kurang dari 6' }}</p>
@@ -33,8 +36,6 @@
         <p v-else-if="jk=='wanita'">Jenis kelamin Perempuan</p>
         <p v-else>Jenis kelamin Belum dipilih</p>
       </div>
-      <br>
-      <button @click="ResetInput" type="button">Reset</button>
     </form>
   </main>
 </template>
@@ -46,11 +47,15 @@ const name = ref('ardin')
 const email = ref('')
 const password = ref('')
 const jk = ref('')
+const show=ref(false)
 function ResetInput() {
   name.value = ''
   email.value = ''
   password.value = ''
   jk.value = ''
+}
+const BtnView = () => {
+  show.value = !show.value
 }
 </script>
 
