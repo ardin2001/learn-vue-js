@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 
 <template>
   <header>
-    <p>Header Vue-1</p>
+    <p style="text-align: center;">Header Vue-1</p>
   </header>
 
   <RouterView />

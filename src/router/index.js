@@ -4,6 +4,7 @@ import OptionView from "@/views/OptionView.vue";
 import EventHandling from "@/views/EventHandling.vue";
 import ListRendering from "@/views/ListRendering.vue";
 import ComputedProperties from "@/views/ComputedProperties.vue";
+import ClassStyleBinding from "@/views/ClassStyleBinding.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: "/computed-properties",
       name: "computed-properties",
       component: ComputedProperties,
+    },
+    {
+      path: "/class-style-binding",
+      name: "class-style-binding",
+      component: ClassStyleBinding,
     },
   ],
 });
