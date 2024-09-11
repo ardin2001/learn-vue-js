@@ -13,7 +13,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyZGluQGdtYWlsLmNvbSIsImlkIjoiQ2NMQmxFQjZ6T0t1M1VxVUlSck4iLCJmdWxsbmFtZSI6ImFyZGluIG51Z3JhaGEiLCJyb2xlIjoidXNlciIsInZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzIxMjc4ODUxfQ.i_oMwpuFCJu82uEPPBFalX7DUmrwWKVMU9Iqr-wFsPI"
+const token = import.meta.env.VITE_APP_TOKEN
 let dataBase = ref([])
 
 // Computed properties berbeda dari methods. Sementara methods dieksekusi setiap kali dipanggil,
@@ -24,7 +24,7 @@ const TotalData = computed(() => {
 
 const fetchPosts = async () => {
   try {
-    const response = await fetch('https://backend-tes-magang.vercel.app/api/restaurants',{
+    const response = await fetch(import.meta.env.VITE_APP_URL_API,{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
