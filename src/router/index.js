@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import OptionView from "@/views/OptionView.vue";
 import EventHandling from "@/views/EventHandling.vue";
 import ListRendering from "@/views/ListRendering.vue";
+import ComputedProperties from "@/views/ComputedProperties.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: "/list-rendering",
       name: "list-rendering",
       component: ListRendering,
+    },
+    {
+      path: "/computed-properties",
+      name: "computed-properties",
+      component: ComputedProperties,
     },
   ],
 });
